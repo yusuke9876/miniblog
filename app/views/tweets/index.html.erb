@@ -1,0 +1,17 @@
+<h1>ブログ一覧</h1>
+
+<ul>
+  
+<% @tweets.each do |tweet| %>
+
+    <li>
+<%= link_to tweet.id, tweet %>
+
+<%= tweet.content %>
+</li>
+  
+<% end %>
+
+</ul>
+
+<%= link_to '新規ブログの投稿', new_tweet_path %>
